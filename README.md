@@ -29,3 +29,16 @@ Use free APIs like OpenWeatherMap.
 Event Data:
 Public events (e.g., concerts, football matches) affect traffic.
 Scrape event data from websites like Eventbrite or use APIs.
+
+
+3. Tools & Libraries
+
+All tools are free and open-source:
+
+Python Libraries:
+pandas, numpy: Data manipulation.
+scikit-learn, tensorflow/pytorch: Machine learning models.
+osmnx, networkx: Road network analysis and visualization.
+folium, matplotlib, seaborn: Data visualization.
+flask: Build a simple web app for user interaction.
+requests: Fetch data from APIs.
