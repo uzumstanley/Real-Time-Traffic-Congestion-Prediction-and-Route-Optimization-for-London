@@ -42,3 +42,8 @@ osmnx, networkx: Road network analysis and visualization.
 folium, matplotlib, seaborn: Data visualization.
 flask: Build a simple web app for user interaction.
 requests: Fetch data from APIs.
+
+## Strategic Locations
+![Unknown](https://github.com/user-attachments/assets/79025332-8784-4d48-b8ff-9d5eba6cf6ba)
+
+
