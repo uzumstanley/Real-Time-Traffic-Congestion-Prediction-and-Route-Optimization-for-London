@@ -44,9 +44,15 @@ flask: Build a simple web app for user interaction.
 requests: Fetch data from APIs.
 
 ## Strategic Locations
-!(https://github.com/user-attachments/assets/79025332-8784-4d48-b8ff-9d5eba6cf6ba)
 
-!(https://github.com/user-attachments/assets/2da5cc03-0c00-4326-b4fc-3f920bd702fb)
+![Unknown-2](https://github.com/user-attachments/assets/6b09701c-f162-4f7d-940e-98d3abd9767f)
+
+
+![Unknown](https://github.com/user-attachments/assets/56414a5d-ce5d-48aa-bf85-a6613b2df29b)
+
+
+
+
 
 
 
