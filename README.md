@@ -13,7 +13,7 @@ How: Use TfL’s open data to build a predictive model and integrate it with a r
 
 2. Data Sources
 
-All data is free and open-source:
+All data is open-source:
 
 TfL Unified API:
 Provides real-time traffic flow, speed, and congestion data.
