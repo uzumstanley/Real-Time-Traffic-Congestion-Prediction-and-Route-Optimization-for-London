@@ -6,7 +6,7 @@ import plotly.express as px
 @st.cache
 def load_data():
     # Corrected file path for downloading as CSV
-    file_path = 'https://drive.google.com/uc?export=download&id=1QA976u9aH07uw7I-ZiiIbgp4jnoWlpiK'
+    file_path = 'https://raw.githubusercontent.com/uzumstanley/Real-Time-Traffic-Congestion-Prediction-and-Route-Optimization-for-London/refs/heads/main/Strategic%20Monitoring%20Areas/Strategic_Monitoring_Areas.csv'
     return pd.read_csv(file_path)
 
 # Load data
