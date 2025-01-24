@@ -50,6 +50,10 @@ requests: Fetch data from APIs.
 
 ![Unknown](https://github.com/user-attachments/assets/56414a5d-ce5d-48aa-bf85-a6613b2df29b)
 
+![Screenshot 2025-01-24 at 01 13 33](https://github.com/user-attachments/assets/6fe258d9-2b48-4ed1-bd70-f3c3b1b615fb)
+
+
+![Screenshot 2025-01-24 at 01 13 18](https://github.com/user-attachments/assets/de9cf1d0-4387-4670-963d-51d7dc799c4b)
 
 
 
