@@ -7,10 +7,10 @@ Data Analysis: Explore the dataset to understand the types of collisions, locati
 Visualization: Create visualizations to highlight trends and patterns in the data.
 Predictive Modeling: Build a machine learning model to predict the likelihood of collisions based on features like location, time, weather, and road conditions.
 Innovation: Propose actionable insights for TfL to reduce collisions, such as targeted road safety campaigns, improved lighting, or traffic management.
-Step 2: Set Up Your Environment
 
-We'll use Python and free tools/libraries:
+
+Tech Stack Python and Tools/Libraries:
 
 Python Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn.
-IDE: Jupyter Notebook (free and easy to use).
-Data Storage: The dataset is already uploaded, so no need for external storage.
+
+Data Source: The dataset is TfL Collision Statistics Data.
