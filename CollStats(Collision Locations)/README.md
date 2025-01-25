@@ -1,8 +1,7 @@
 Project Overview
 
-We will create a "Collision Analysis and Prediction System" using the TfL dataset. The goal is to analyze historical collision data, identify patterns, and build a predictive model to estimate the likelihood of collisions in specific areas. This system can help TfL improve road safety by identifying high-risk zones and implementing preventive measures.
+Collision Analysis and Prediction System using the TfL dataset. The goal is to analyze historical collision data, identify patterns, and build a predictive model to estimate the likelihood of collisions in specific areas. This system can help TfL improve road safety by identifying high-risk zones and implementing preventive measures.
 
-Step 1: Define the Project Scope
 
 Data Analysis: Explore the dataset to understand the types of collisions, locations, severity, and contributing factors (e.g., weather, road type, time of day).
 Visualization: Create visualizations to highlight trends and patterns in the data.
