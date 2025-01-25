@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project aims to analyze collision data to understand patterns, severity, and contributing factors. The dataset contains detailed information about various collisions, including time, location, vehicle types, and environmental conditions. The goal is to build a predictive model to assess collision severity and derive actionable insights.
+This project aims to analyze TfL collision data to understand patterns, severity, and contributing factors. The dataset contains detailed information about various collisions, including time, location, vehicle types, and environmental conditions. The goal is to build a predictive model to assess collision severity and derive actionable insights.
 
 ## Dataset
 
