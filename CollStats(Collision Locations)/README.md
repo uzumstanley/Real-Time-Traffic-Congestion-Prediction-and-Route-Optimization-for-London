@@ -65,7 +65,7 @@ A classification model was chosen to predict the severity of collisions. The tar
 - The distribution of collision severity is heavily skewed towards "Slight" collisions, with "Serious" and "Fatal" collisions being significantly less frequent. This is evident from the "Distribution of Collision Severity" graph.
 
 ### Geographical Insights
-- Certain boroughs have higher collision rates. For example, Lambeth has the highest number of collisions (6,305), followed by Tower Hamlets (5,817) and Southwark (5,614). The "Collisions by Borough" table provides a detailed breakdown of collision counts by borough.
+- Certain boroughs have higher collision rates. For example, Westminster has the highest number of collisions (6,924), followed by Lambeth (6305), Tower Hamlets (5,817) and Southwark (5,614). The "Collisions by Borough" table provides a detailed breakdown of collision counts by borough.
 
 ### Severity Factors
 - Factors like road surface conditions, light conditions, and weather significantly impact collision severity.
