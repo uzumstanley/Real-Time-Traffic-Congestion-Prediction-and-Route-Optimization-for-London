@@ -14,3 +14,5 @@ Tech Stack Python and Tools/Libraries:
 Python Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn.
 
 Data Source: The dataset is TfL Collision Statistics Data.
+
+![Unknown-2](https://github.com/user-attachments/assets/5fa2af15-5a81-47a7-9b60-7d6dee9e7b8d)
