@@ -9,3 +9,6 @@ Frontend: HTML/CSS + Leaflet.js (Interactive maps)
 Database: SQLite (Embedded database)
 Deployment: Heroku
 Libraries: Pandas (Data processing), pyproj (Coordinate conversion)
+
+
+![Screenshot 2025-01-26 at 22 04 29](https://github.com/user-attachments/assets/1fc8002a-78ba-44a7-a0df-37a7faa5f47b)
