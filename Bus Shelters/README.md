@@ -7,5 +7,5 @@ This interactive web app visualizes bus shelters on a map, highlights maintenanc
 Backend: Python + Flask (Lightweight web framework)
 Frontend: HTML/CSS + Leaflet.js (Interactive maps)
 Database: SQLite (Embedded database)
-Deployment: Heroku (Free hosting)
+Deployment: Heroku
 Libraries: Pandas (Data processing), pyproj (Coordinate conversion)
