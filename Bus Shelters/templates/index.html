@@ -1,0 +1,60 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart TfL Shelter Monitor</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map { height: 100vh; }
+        .leaflet-control-filter {
+            padding: 10px;
+            background: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="map">{{ map_html|safe }}</div>
+
+    <!-- Add Filter Controls -->
+    <div class="leaflet-control-filter">
+        <h4>Live Filters</h4>
+        <select id="statusFilter">
+            <option value="all">All Statuses</option>
+            <option value="A">Active</option>
+            <option value="I">Inactive</option>
+        </select>
+        <input type="date" id="cleanDate" placeholder="Last cleaned after...">
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Interactive Filter Logic
+        document.getElementById('statusFilter').addEventListener('change', updateMap);
+        document.getElementById('cleanDate').addEventListener('change', updateMap);
+
+        function updateMap() {
+            const status = document.getElementById('statusFilter').value;
+            const date = document.getElementById('cleanDate').value;
+            
+            // Add AJAX call to filter backend data
+            fetch(`/filter?status=${status}&date=${date}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Update map markers here
+                });
+        }
+
+        function reportIssue(shelterCode) {
+            const issue = prompt("Describe the issue:");
+            if(issue) {
+                fetch('/report', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({shelter: shelterCode, issue: issue})
+                });
+            }
+        }
+    </script>
+</body>
+</html>
