@@ -87,4 +87,6 @@ This project demonstrates how data-driven insights can transform river transport
 
 **Next Steps**: Present findings to TfL stakeholders, refine models with additional data (e.g., ridership, traffic flow), and pilot proposed piers.  
 
+![Screenshot 2025-01-28 at 19 44 02](https://github.com/user-attachments/assets/43ef6880-71ee-4bae-99dc-c04b0d8f40b7)
+
 
