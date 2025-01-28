@@ -1,50 +1,90 @@
-# 🇳🇬 NaijaWeb
-
-NaijaWeb is a web scraping project inspired by the [FineWeb paper](https://arxiv.org/abs/2406.17557) and the [WebText dataset](https://paperswithcode.com/dataset/webtext), including the [OpenWebText dataset](https://huggingface.co/datasets/Skylion007/openwebtext).
-
-The scraping was performed on **Google Colab** due to its **free memory** and **easy integration with Google Drive**. Several notebooks (`clean_download_data.ipynb`, `clean_download_data_403.ipynb`, `download_webpages.ipynb`, `webscrape_403.ipynb`, and `webscrape_nairaland.ipynb`) were run across 9 different Colab notebooks (3 notebooks per Colab account) to expedite the process. All notebooks were linked to a single Google Drive folder: `/content/drive/MyDrive/nairaland_webtext`, where the files were saved.
-
-The dataset is available on Hugging Face: [NaijaWeb Dataset](https://huggingface.co/datasets/saheedniyi/naijaweb).
-
-## Notebooks and Process
-
-### [webscrape_nairaland.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/webscrape_nairaland.ipynb)
-This notebook scrapes and extracts posts from a specific **section** on [Nairaland](https://www.nairaland.com/). The script first collects all **post links** for each section and saves them to a pickle file. It then downloads the individual posts. Due to Colab's limited runtime, the process was distributed across 9 notebooks, where the long list of post links was split into smaller chunks to speed up the downloads.
-
-### [extract_outboundlinks.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/extract_outboundlinks.ipynb)
-This notebook extracts all outbound links from the downloaded posts, filters out certain domains, performs basic cleaning (removing full stops at the end of links and consecutive full stops), and saves the cleaned links to a CSV file.
-
-### [download_webpages.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/download_webpages.ipynb)
-This notebook downloads webpages from the outbound links extracted in the previous step. The links are downloaded in batches of 1,000 and saved as pickle files. This process was also run across 9 notebooks to save time.
-
-### [clean_download_data.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/clean_download_data.ipynb)
-This notebook uses [Trafilatura](https://trafilatura.readthedocs.io/en/latest/) (as inspired by the FineWeb paper) to extract and clean the downloaded webpages. Pages that returned a "403 Forbidden" response were saved for later handling.
-
-### [webscrape_403.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/webscrape_403.ipynb)
-This notebook redownloads webpages that initially returned a 403 error using [Cloudscraper](https://pypi.org/project/cloudscraper/).
-
-### [clean_download_data_403.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/clean_download_data_403.ipynb)
-This notebook extracts and cleans the data from the webpages that were redownloaded due to the 403 error.
-
-### [fineweb_clean_data.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/fineweb_clean_data.ipynb)
-This notebook applies the same cleaning process used on the FineWeb dataset, following these steps:
-- 🔻 **FILTER**: 😈 URL filter
-- 🔻 **FILTER**: 👯 Gopher repetition
-- 🔻 **FILTER**: 🥇 Gopher quality
-- 🔻 **FILTER**: ⛰ C4 quality
-- 🔻 **FILTER**: 🍷 FineWeb quality
-- 🔢 **TOKENIZER**: 📊 Counter
-- 💽 **WRITER**: 🐿 Jsonl
-
-### [PII_formatter.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/PII_formatter.ipynb)
-This notebook removes Personally Identifiable Information (PII) such as emails and IP addresses from the dataset.
-
-### [push_to_hub.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/push_to_hub.ipynb)
-This notebook pushes the full dataset to Hugging Face and calculates the educational score of the dataset using the [FineWeb EDU classifier](https://huggingface.co/HuggingFaceFW/fineweb-edu-classifier). Note that the classifier's predictions may not be fully accurate due to the limited amount of Nigerian data the model was likely trained on.
-
-### [extract_naijaweb_edu.ipynb](https://github.com/saheedniyi02/naijaweb/blob/main/extract_naijaweb_edu.ipynb)
-This notebook detects the language of the documents and creates two subsets of the dataset: **[NaijaWeb EDU](https://huggingface.co/datasets/saheedniyi/naijaweb-edu)** and **[NaijaWeb EDU2](https://huggingface.co/datasets/saheedniyi/naijaweb-edu2)**, using the educational score. This is an attempt to recreate the FineWeb EDU dataset with Nigerian content.
+**High-Level Project Report**  
+**Title**: Enhancing Thames Connectivity: A Data-Driven Approach to Optimizing River Transport  
+**Author**: Uzum Stanley  
+**Date**: January 2025 
 
 ---
 
-If you find this project helpful, consider giving the repo a star. Thank you!
+### **Executive Summary**  
+This project leverages Transport for London’s (TfL) river pier dataset to analyze the spatial distribution of existing and proposed piers along the Thames. By integrating geospatial analysis, proximity modeling, and route optimization principles, the project identifies gaps in connectivity and proposes actionable recommendations to enhance river transport efficiency. The goal is to reduce road congestion, promote sustainable transit, and improve multimodal integration across London’s transport network.
+
+---
+
+### **1. Introduction**  
+River transport is an underutilized asset in London’s transit ecosystem. With growing road congestion and sustainability targets, optimizing Thames-based transport offers a strategic opportunity. This project focuses on:  
+- **Visualizing** current and proposed piers.  
+- **Identifying gaps** in pier distribution.  
+- **Recommending** data-backed improvements for TfL’s river network.  
+
+---
+
+### **2. Methodology**  
+#### **Data Preprocessing**  
+- Converted OSGB36 (EPSG:27700) coordinates to WGS84 (EPSG:4326) for global mapping compatibility.  
+- Cleaned and structured data for analysis.  
+
+#### **Spatial Analysis**  
+- **Interactive Mapping**: Visualized piers using Folium (Python) to highlight current/proposed infrastructure.  
+- **Proximity Analysis**: Calculated average distances between piers (~1.8 km) using Nearest Neighbor algorithms. Identified gaps (>2 km) in areas such as Putney to Richmond.  
+- **Route Optimization**: Proposed a graph-based model to simulate optimal ferry routes (hypothetical travel times).  
+
+#### **Tools Used**  
+- Python (Pandas, Scikit-learn, Folium, PyProj).  
+- Geospatial libraries for coordinate conversion.  
+- NetworkX for graph-based route modeling.  
+
+---
+
+### **3. Key Findings**  
+1. **Spatial Distribution**:  
+   - High pier density in central London (e.g., Tower Pier, London Eye Pier).  
+   - Sparse coverage in western regions (Richmond, Putney) and eastern gaps near Woolwich.  
+
+2. **Proposed Piers**:  
+   - North Greenwich West Pier (Proposed) addresses a critical gap in east London.  
+   - Battersea Pier (Proposed) enhances connectivity in southwest London.  
+
+3. **Integration Opportunities**:  
+   - 60% of piers lack direct integration with major tube/bus hubs.  
+   - High commuter demand zones (e.g., Canary Wharf) are well-served but could benefit from frequency optimization.  
+
+---
+
+### **4. Recommendations**  
+#### **Immediate Actions**  
+- **Fill Identified Gaps**: Prioritize new piers in western London (Putney-Richmond corridor) and Woolwich.  
+- **Enhance Multimodal Links**: Integrate piers with nearby TfL services (e.g., bus routes at Greenwich Pier).  
+
+#### **Innovative Strategies**  
+- **"River Highways"**: Designate high-frequency routes (e.g., Westminster to Canary Wharf) as express corridors.  
+- **Dynamic Scheduling**: Use IoT sensors and ridership data to adjust ferry timetables in real time.  
+- **Sustainability Initiatives**: Introduce electric/hybrid ferries at key hubs (e.g., North Greenwich Pier).  
+
+#### **Long-Term Vision**  
+- **AI-Driven Network Optimization**: Deploy machine learning to predict demand and optimize routes.  
+- **Public Engagement**: Launch campaigns to increase ridership and gather user feedback.  
+
+---
+
+### **5. Conclusion**  
+This project demonstrates how data-driven insights can transform river transport into a backbone of London’s sustainable transit strategy. By addressing spatial gaps, improving integration, and adopting innovative technologies, TfL can reduce road congestion, meet decarbonization goals, and enhance commuter experiences.  
+
+---
+
+### **6. Deliverables**  
+1. **Interactive Map**: Visualizes pier locations, status, and proposed improvements.  
+2. **Jupyter Notebook**: Contains reproducible code for analysis and modeling.  
+3. **Dataset**: Cleaned and georeferenced pier data (CSV format).  
+
+---
+
+### **7. Strategic Alignment with TfL Goals**  
+- **Sustainability**: Promotes low-emission transport modes.  
+- **Efficiency**: Reduces reliance on congested road networks.  
+- **Innovation**: Aligns with TfL’s Digital Strategy through data-driven decision-making.  
+
+---
+
+**Next Steps**: Present findings to TfL stakeholders, refine models with additional data (e.g., ridership, traffic flow), and pilot proposed piers.  
+
+
